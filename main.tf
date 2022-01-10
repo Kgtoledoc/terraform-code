@@ -18,7 +18,7 @@ resource "aws_vpc" "example" {
 
 resource "aws_instance" "example-0000" {
   ami = "ami-002068ed284fb165b"
-  shape ="t2.micro"
+  instance_type ="t2.micro"
   tags = {
     Name = "Example-0000"
     Terraform = "True"
