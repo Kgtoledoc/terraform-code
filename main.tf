@@ -39,7 +39,7 @@ resource "aws_security_group" "sec-ssh" {
 }
 
 resource "aws_instance" "example-0000" {
-  ami = "ami-002068ed284fb165b"
+  ami = data.aws_ami.ubuntu.id
   instance_type ="t2.micro"
   vpc_security_group_ids = [aws_security_group.sec-http.id,aws_security_group.sec-ssh.id]
   tags = {
@@ -47,3 +47,7 @@ resource "aws_instance" "example-0000" {
     Terraform = "True"
   }
 }
+
+
+
+
