@@ -13,3 +13,5 @@ output "ami_id" {
     description = "The Image ID we interrogated for Ubuntu AMI"
   
 }
+
+
